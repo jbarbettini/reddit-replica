@@ -1,0 +1,25 @@
+.nav-wrapper {
+  background-color: #db0a5b;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
