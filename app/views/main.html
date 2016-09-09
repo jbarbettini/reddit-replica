@@ -9,12 +9,12 @@
         <li ng-click="changeSort('top')"><a>Top</a></li>
       </ul>
     </div>
-    <div class="row options" ng-mouseleave="console.log('mouseleave')">
+    <div class="row options">
       <h2> Filter By: </h2>
-      <ul ng-repeat="subreddit in subreddits">
-        <li>{{subreddit.data.display_name}}</li>
+      <ul ng-repeat="subreddit in subreddits track by $index">
+        <li ng-click="selectSubreddit($index)">{{subreddit.data.display_name}}</li>
       </ul>
-      <button>Submit</button>
+      <button ng-click="submitSubs()">Submit</button>
     </div>
   </div>
   <div class="row valign-wrapper card-panel card-action" ng-repeat="content in contents">
