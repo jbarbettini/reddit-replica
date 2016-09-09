@@ -1,7 +1,28 @@
 <div class="row">
-  <h1> Hello World </h1>
-  <div ng-repeat="content in data">
-    <h2> {{content.data.title}} </h2>
-    <p> {{content.data.subreddit}} </p>
+  <div class="row hide-on-med-and-down">
+    <div class="row options">
+      <h2> Sort By: </h2>
+      <ul class="sort"> 
+        <li><a href="#" ng-click="changeSort('hot')">Hot</a></li>
+        <li><a href="#" ng-click="changeSort('new')">New</a></li>
+        <li><a href="#" ng-click="changeSort('random')">Random</a></li>
+        <li><a href="#" ng-click="changeSort('top')">Top</a></li>
+      </ul>
+    </div>
+    <div class="row options">
+      <h2> Filter By: </h2>
+      <ul ng-repeat="subreddit in subreddits">  
+        <li> <a href="#">{{subreddit.data.display_name}}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row valign-wrapper card-panel card-action" ng-repeat="content in data">
+    <div class="col s10 m10 l10">
+      <a href="{{content.data.url}}" target="_blank"> <h3> {{content.data.title}} </h3> </a>
+    </div>
+    <div class="col s2 m2 l2 valign">
+      <p class="subreddit"> {{content.data.subreddit}} </p>
+    </div>
+    <div class="divider"></div>
   </div>
 </div>

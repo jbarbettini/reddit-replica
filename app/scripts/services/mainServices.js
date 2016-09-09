@@ -1,13 +1,23 @@
+'use strict';
+
 angular.module('redditReplicaApp.services', [])
 
 .factory('MainService', function($http) {
-  var getData = function() {
-    return $http.get('http://www.reddit.com/.json').then(function(results) {
+  var getData = function(trend) {
+    console.log('trend is', trend);
+    return $http.get('http://www.reddit.com/' + trend + '/.json').then(function(results) {
       return results.data.data.children;
     });
   };
 
+  var getSubreddits = function() {
+    return $http.get('http://www.reddit.com/reddits.json').then(function(results) {
+      return results.data.data.children;
+    });
+  }
+
   return {
-    'getData': getData
+    'getData': getData,
+    'getSubreddits': getSubreddits
   };
 });

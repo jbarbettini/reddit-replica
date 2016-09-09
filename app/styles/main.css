@@ -1,7 +1,7 @@
 .nav-wrapper {
   background-color: #db0a5b;
   display: flex;
-  justify-content: space-between; 
+  justify-content: center; 
 }
 
 .logo {
@@ -20,6 +20,56 @@ h1 {
 }
 
 h2 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+h3 {
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+a {
+  color: black;
+}
+
+li {
+  font-size: 0.8rem;
+}
+
+li:hover {
+  background-color: rgba(219,10,91,0.2);
+}
+
+.subreddit {
+  border-radius: 25px;
+  border: 0.25px solid #e0e0e0;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.options li {
+  border-radius: 25px;
+  border: 0.25px solid #e0e0e0;
+  text-align: center;
+  padding: 0.5rem;
+  min-width: 10vw;
+}
+
+.sort {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
 }
