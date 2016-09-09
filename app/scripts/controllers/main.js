@@ -17,8 +17,9 @@ angular.module('redditReplicaApp')
   };
 
   MainService.getSubreddits()
-    .then(function(subreddits) {
-      $scope.subreddits = subreddits;
+    .then(function(data) {
+      console.log('data');
+      $scope.subreddits = data;
     });
 
   $scope.changeSort('hot');

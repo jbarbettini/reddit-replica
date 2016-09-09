@@ -13,6 +13,7 @@ angular.module('redditReplicaApp.services', [])
 
   var getSubreddits = function() {
     return $http.get('http://www.reddit.com/subreddits/popular.json').then(function(results) {
+      console.log('subreddits', results);
       return results.data.data.children;
     });
   };
