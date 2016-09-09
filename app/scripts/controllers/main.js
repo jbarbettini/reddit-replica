@@ -8,16 +8,18 @@ angular.module('redditReplicaApp')
   $scope.changeSort = function(newSort) {
     $scope.sort = newSort;
     MainService.getData($scope.sort)
-    .then(function(data) {
-      console.log('data', data);
-      $scope.data = data;
+    .then(function(contents) {
+      console.log('contents', contents);
+        $scope.contents = contents;  
+
+      console.log('scope.contents is', $scope.contents);
     });
-  }
+  };
 
   MainService.getSubreddits()
-    .then(function(data) {
-      $scope.subreddits = data;
-    })
+    .then(function(subreddits) {
+      $scope.subreddits = subreddits;
+    });
 
   $scope.changeSort('hot');
 }]);

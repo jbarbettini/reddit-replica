@@ -2,8 +2,6 @@
 
 angular.module('redditReplicaApp', [
   'redditReplicaApp.services',
-  'ngAnimate',
-  'ngResource',
   'ngRoute',
   'ngSanitize'
 ])

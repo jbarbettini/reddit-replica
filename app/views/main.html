@@ -3,20 +3,21 @@
     <div class="row options">
       <h2> Sort By: </h2>
       <ul class="sort"> 
-        <li><a href="#" ng-click="changeSort('hot')">Hot</a></li>
-        <li><a href="#" ng-click="changeSort('new')">New</a></li>
-        <li><a href="#" ng-click="changeSort('random')">Random</a></li>
-        <li><a href="#" ng-click="changeSort('top')">Top</a></li>
+        <li ng-click="changeSort('hot')"><a>Hot</a></li>
+        <li ng-click="changeSort('new')"><a>New</a></li>
+        <li ng-click="changeSort('random')"><a>Random</a></li>
+        <li ng-click="changeSort('top')"><a>Top</a></li>
       </ul>
     </div>
-    <div class="row options">
+    <div class="row options" ng-mouseleave="console.log('mouseleave')">
       <h2> Filter By: </h2>
-      <ul ng-repeat="subreddit in subreddits">  
-        <li> <a href="#">{{subreddit.data.display_name}}</a></li>
-      </ul>
+      <div ng-repeat="subreddit in subreddits track by $index">
+        <select> {{subreddit.data.display_name}} </select>
+      </div>
+      <button>Submit</button>
     </div>
   </div>
-  <div class="row valign-wrapper card-panel card-action" ng-repeat="content in data">
+  <div class="row valign-wrapper card-panel card-action" ng-repeat="content in contents">
     <div class="col s10 m10 l10">
       <a href="{{content.data.url}}" target="_blank"> <h3> {{content.data.title}} </h3> </a>
     </div>
