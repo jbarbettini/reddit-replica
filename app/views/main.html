@@ -5,14 +5,13 @@
       <ul class="sort"> 
         <li ng-click="changeSort('hot')"><a>Hot</a></li>
         <li ng-click="changeSort('new')"><a>New</a></li>
-        <li ng-click="changeSort('random')"><a>Random</a></li>
         <li ng-click="changeSort('top')"><a>Top</a></li>
       </ul>
     </div>
     <div class="row options">
       <h2> Filter By: </h2>
       <ul ng-repeat="subreddit in subreddits track by $index">
-        <li ng-click="selectSubreddit($index)">{{subreddit.data.display_name}}</li>
+        <li ng-class="subreddit.status ? 'subreddit-active' : ''" ng-click="selectSubreddit($index)">{{subreddit.name}}</li>
       </ul>
       <button ng-click="submitSubs()">Submit</button>
     </div>
@@ -23,6 +22,16 @@
     </div>
     <div class="col s2 m2 l2 valign">
       <p class="subreddit"> {{content.data.subreddit}} </p>
+      <div class="content-stats">
+        <div class="indiv-stats">
+          <i class="material-icons">favorite</i>
+          <p> {{content.data.score}} </p>
+        </div>
+        <div class="indiv-stats">
+          <i class="material-icons">comment</i>
+          <p> {{content.data.num_comments}} </p>
+        </div>
+      </div>
     </div>
     <div class="divider"></div>
   </div>

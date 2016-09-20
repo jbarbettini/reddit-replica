@@ -1,21 +1,14 @@
 # Reddit Replica
 
-Hey Chris and Mike,
+This application was made in Angular 1.4 with Materialize CSS. Basic interactivity includes being able to sort the Reddit feed by most popular subreddits, as well as Reddit's default parameters. 
 
-This application was made in Angular 1.5 with Materialize CSS. Basic interactivity includes being able to click within the center module ('summary cards'), with content dynamically rendering to the right. 
+I chose Angular because I felt it was the shortest path to results for this single-page application. I used Materialize for its responsive grid layout as well as its built-in styling and functionality; likewise, I also wanted the personal challenge of building with a CSS framework, since I'm accustomed to custom styling all of my previous applications. 
 
-I chose Angular because I felt it was the shortest path to results for this single-page application. I used Materialize for its responsive grid layout as well as its built-in styling and functionality. I also wanted the personal challenge of building with a CSS framework, since I'm used to custom styling all of my previous applications. Ironically, I may have caused more problems for myself with the Materialize choice rather than going the custom route. 
+I particularly enjoyed designing the interface for this application; I wanted to keep the look clean, simple, and intuitive for the user, and I did my best to achieve that here. 
 
-One challenge I faced was making the width of the logo and sidebar slightly more narrow. Ideally, I'd like to have it at a max-width of 75px, but I ran into issues when fixing the width because the adjacent columns would not fill the extra space. I didn't want to add a 'hacky' solution like manually adjusting the adjacent content containers to fill the missing space, because it would break the responsive elements, so I've left it as is for now. 
+Since Angular provided built-in routing functionality, I was able to bypass the back-end components by directly querying the Reddit API from the client side. I realize that this scenario would never happen in a real production environment, but for the purposes of this challenge and its time-sensitive nature, I made the decision to continue as is. 
 
-Given more time, I would want to recompile Materialize from its original SASS source to customize the grid width. I'd also love to use SASS for all the custom styles as well so that I can avoid some repeating code such as font-sizes, flexbox parameters, and color/border variables. 
-
-I hope this meets your requirements! Please let me know if you would like to discuss this project further. 
-
-Warmly, 
-Jen
-
-jenn.r.ong@gmail.com | (408) 242-4808 
+Given more time, I would love to properly refactor it to route Reddit queries through the server. I'd also enjoy using SASS for all the custom styles as well so that I can avoid some repeating code such as font-sizes, flexbox parameters, and color/border variables. 
 
 ## How to run this application
 
