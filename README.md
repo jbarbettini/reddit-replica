@@ -1,6 +1,6 @@
 # Reddit Replica
 
-This application was made in Angular 1.4 with Materialize CSS. Basic interactivity includes being able to sort the Reddit feed by most popular subreddits, as well as Reddit's default parameters. 
+This application was made in Angular 1.5 with Materialize CSS. Basic interactivity includes being able to sort the Reddit feed by most popular subreddits, as well as Reddit's default parameters. 
 
 I chose Angular because I felt it was the shortest path to results for this single-page application. I used Materialize for its responsive grid layout as well as its built-in styling and functionality; likewise, I also wanted the personal challenge of building with a CSS framework, since I'm accustomed to custom styling all of my previous applications. 
 
